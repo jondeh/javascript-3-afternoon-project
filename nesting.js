@@ -50,7 +50,16 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater() {
+  employees.forEach(function(e, i){
+    if(e.firstName === "Theo") {
+      employees.splice(i, 1)
+    } else if(e.firstName === "Lorie") {
+      e.department = "HR"
+    }
+  })
+  return employees
+}
 
 
 
@@ -68,8 +77,29 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(arr) {
+  for(let i = 0; i < arr.length; i++) {
+    for(let j = arr.length - 1; j < i; j--) {
+      if(j = i) {
+        arr.splice[j, 1]
+      }
+    }
+  }
+  return arr
+}
+removeDuplicates(workplaceAccidents)
 
+function removeDuplicates(arr) {
+  for(let i = 0; i < arr.length; i++) {
+    for(let j = arr.length - 1; j > i; j--) {
+      if(arr[j] === arr[i]) {
+        arr.splice(j, 1)
+      }
+    }
+  }
+  return arr
+}
+removeDuplicates(workplaceAccidents)
 
 
 ////////// PROBLEM 3 //////////

@@ -149,4 +149,8 @@ let bobsTotal = function(arr) {
   return bobsPur3
 }
 
-bobsTotal(purchases)
+let bobsTotal = purchases.reduce(x, y) {
+  if(y.owner === 'Bob') {
+    return y.price + x
+  }
+}
