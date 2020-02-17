@@ -128,7 +128,19 @@ var cat = {
 
 //Code Here
 var grumpyActivity;
+function grumpCat(cat) {
+  for(i = 0; i < cat.catFriends.length; i++)
+    if(cat.catFriends[i].name === "Grumpy") {
+      grumpyActivity = cat.catFriends[i].activities[1]
+  }
+}
+grumpCat(cat)
+
 var fluffy2ndFriend;
+function flufFriend(cat) {
+  fluffy2ndFriend = cat.catFriends[1].name
+}
+flufFriend(cat)
 
 
 
@@ -168,8 +180,13 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
-
+function recordCleaner(obj) {
+  for(let i = 0; i < obj.accidents.length; i++) {
+      obj.accidents[i].atFaultForAccident = false
+  }
+  return(obj)
+}
+recordCleaner(myCar)
 
 
 ////////// PROBLEM 5 //////////
@@ -187,6 +204,19 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper(numArr) {
+  for(let i =0; i < numArr.length; i++) {
+    for(let j = 0; j < numArr[i].length; j++) {
+      if(numArr[i][j] % 2 === 0) {
+        numArr[i][j] = "even"
+      }
+      else {
+        numArr[i][j] = "odd"
+      }
+    }
+  }
+  return numArr
+}
 
+looper(numsArr)
 
