@@ -136,21 +136,31 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal = function(arr) {
-  let bobsPur1 = arr.filter(function(e){
-    return e["owner"] === "Bob"
-  })
-  let bobsPur2 = bobsPur1.map(function(ele){
-    return ele["price"]
-  })
-  let bobsPur3 = bobsPur2.reduce(function(acc, val){
-    return acc + val
-  })
-  return bobsPur3
-}
+// function bobsTotal(arr) {
+//   let bobsPur1 = arr.filter(function(e){
+//     return e["owner"] === "Bob"
+//   })
+//   let bobsPur2 = bobsPur1.map(function(ele){
+//     return ele["price"]
+//   })
+//   let bobsPur3 = bobsPur2.reduce(function(acc, val){
+//     return acc + val
+//   })
+//   return bobsPur3
+// }
 
-let bobsTotal = purchases.reduce(x, y) {
-  if(y.owner === 'Bob') {
-    return y.price + x
+
+// let bobsTotal = purchases.reduce(function(x, y) {
+//   if(y["owner"] === 'Bob') {
+//     return y["price"] + x
+//   } 
+// }, 0)
+
+
+let bobsTotal = purchases.reduce(function(x,y){
+  if(y.owner === 'Bob'){
+    return x + y.price
+  } else {
+    return x
   }
-}
+}, 0)

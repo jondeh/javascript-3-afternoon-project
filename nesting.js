@@ -209,14 +209,12 @@ function looper(numArr) {
     for(let j = 0; j < numArr[i].length; j++) {
       if(numArr[i][j] % 2 === 0) {
         numArr[i][j] = "even"
-      }
-      else {
+      } 
         numArr[i][j] = "odd"
-      }
-    }
+      }    
   }
   return numArr
 }
 
-looper(numsArr)
-
+console.log(looper(numsArr))
+console.log(numsArr)
