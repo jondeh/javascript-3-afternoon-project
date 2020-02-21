@@ -180,13 +180,13 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-function recordCleaner(obj) {
-  for(let i = 0; i < obj.accidents.length; i++) {
-      obj.accidents[i].atFaultForAccident = false
+function recordCleaner() {
+  for(let i = 0; i < myCar.accidents.length; i++) {
+      myCar.accidents[i].atFaultForAccident = false
   }
-  return(obj)
+  return(myCar)
 }
-recordCleaner(myCar)
+
 
 
 ////////// PROBLEM 5 //////////
@@ -204,17 +204,27 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-function looper(numArr) {
-  for(let i =0; i < numArr.length; i++) {
-    for(let j = 0; j < numArr[i].length; j++) {
-      if(numArr[i][j] % 2 === 0) {
-        numArr[i][j] = "even"
-      } 
-        numArr[i][j] = "odd"
-      }    
-  }
-  return numArr
-}
+// function looper(numArr) {
+//   for(let i =0; i < numArr.length; i++) {
+//     for(let j = 0; j < numArr[i].length; j++) {
+//       if(numArr[i][j] % 2 === 0) {
+//         numArr[i][j] = "even"
+//       } 
+//         numArr[i][j] = "odd"
+//       }    
+//   }
+//   return numArr
+// }
 
-console.log(looper(numsArr))
-console.log(numsArr)
+function looper(){
+  for(let i = 0; i < numsArr.length; i++){
+    for(let j = 0; j < numsArr[i].length; j++){
+      if(numsArr[i][j] % 2 === 1) {
+        numsArr[i][j] = 'odd'
+      } else {
+        numsArr[i][j] = 'even'
+      }
+    }
+  }
+  return numsArr
+}
